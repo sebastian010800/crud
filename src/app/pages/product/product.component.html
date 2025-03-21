@@ -1,0 +1,86 @@
+<!-- <div>
+  <button (click)="onAddProduct()">add product</button>
+</div>
+
+<div *ngIf="showForm">
+  <app-form-product
+    [product]="selectProduct"
+    (saveProduct)="onSaveProduct($event)"
+    (onCancel)="onCancel()">
+    
+  </app-form-product>
+</div>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Value</th>
+      <th>Stock</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of products">
+      <td>{{ product.name }}</td>
+      <td>{{ product.value }}</td>
+      <td>{{ product.stock }}</td>
+      <td>
+        <button (click)="onEditProduct(product)">Edit</button>
+        <button (click)="onDeleteProduct(product)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table> -->
+
+<div class="bg-gray-100 min-h-screen p-6">
+  <button
+    (click)="onAddProduct()"
+    type="button"
+    class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-4"
+  >
+    Add Product
+  </button>
+
+  <div class="relative overflow-x-auto mb-6">
+    <table
+      class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 border-collapse"
+    >
+      <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+        <tr>
+          <th scope="col" class="px-6 py-3 border-b">Name</th>
+          <th scope="col" class="px-6 py-3 border-b">Value</th>
+          <th scope="col" class="px-6 py-3 border-b">Stock</th>
+          <th scope="col" class="px-6 py-3 border-b">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          *ngFor="let product of products"
+          class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200"
+        >
+          <th
+            scope="row"
+            class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+          >
+            {{ product.name }}
+          </th>
+          <td class="px-6 py-4 border-b">{{ product.value }}</td>
+          <td class="px-6 py-4 border-b">{{ product.stock }}</td>
+          <td class="px-6 py-4">
+            <button (click)="onEditProduct(product)" class="text-blue-600">Edit</button>
+            <button (click)="onDeleteProduct(product)" class="text-red-600">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div *ngIf="showForm">
+    <app-form-product
+    [product]="selectProduct"
+    (saveProduct)="onSaveProduct($event)"
+    (onCancel)="onCancel()">
+    
+  </app-form-product>
+  </div>
+</div>
