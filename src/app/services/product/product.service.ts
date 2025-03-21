@@ -17,6 +17,7 @@ import { ProductModel } from '../../models/product.model';
   providedIn: 'root',
 })
 export class ProductService {
+  
   private firestore = inject(Firestore);
   private productCollection = collection(this.firestore, ProductModel.REF);
 
