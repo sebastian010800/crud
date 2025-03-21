@@ -1,43 +1,24 @@
-<form [formGroup]="productForm" (ngSubmit)="onSubmit()">
-  <div>
-    <label for="name">Product Name</label>
-    <input id="name" formControlName="name" type="text" required/>
-  </div>
-
-  <div>
-    <label for="value">Value</label>
-    <input id="value" formControlName="value" type="number" required/>
-  </div>
-
-  <div>
-    <label for="stock">Stock</label>
-    <input id="stock" formControlName="stock" type="number" required/>
-  </div>
-
-  <div>
-    <button type="submit" [disabled]="productForm.invalid">Save Product</button>
-    <button type="button" (click)="cancel.emit()">Cancel</button>
-  </div>
-</form>
-<!-- 
-<form class="max-w-sm mx-auto bg-white p-6 border rounded-md shadow-lg">
+<form
+  [formGroup]="productForm"
+  (ngSubmit)="onSubmit()"
+  class="max-w-md mx-auto bg-white dark:bg-gray-800 p-8 border border-gray-200 dark:border-gray-700 rounded-2xl shadow-lg space-y-6"
+>
   <div class="mb-5">
     <label
       for="name"
       class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-      >Name</label
+      >Product Name</label
     >
     <input
       id="name"
       formControlName="name"
       type="text"
-      required
-      type="name"
       class="shadow-xs bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-xs-light"
+      required
     />
   </div>
 
-  <div class="mb-5">
+  <div>
     <label
       for="value"
       class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
@@ -47,41 +28,40 @@
       id="value"
       formControlName="value"
       type="number"
-      required
       class="shadow-xs bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-xs-light"
       required
     />
   </div>
 
-  <div class="mb-5">
+  <div>
     <label
       for="stock"
       class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-      >stock</label
+      >Stock</label
     >
     <input
+      id="stock"
       formControlName="stock"
       type="number"
-      id="stock"
       class="shadow-xs bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-xs-light"
       required
     />
   </div>
 
-  <div class="flex items-start mb-5">
+  <div class="flex justify-between gap-4 pt-4">
     <button
       type="submit"
       [disabled]="productForm.invalid"
-      class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+      class="w-full text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-xl text-sm px-5 py-2.5 text-center dark:bg-blue-500 dark:hover:bg-blue-600 dark:focus:ring-blue-700 transition-all duration-200"
     >
       Save Product
     </button>
     <button
       type="button"
       (click)="cancel.emit()"
-      class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+      class="w-full text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-xl text-sm px-5 py-2.5 text-center dark:bg-blue-500 dark:hover:bg-blue-600 dark:focus:ring-blue-700 transition-all duration-200"
     >
       Cancel
     </button>
   </div>
-</form> -->
+</form>
