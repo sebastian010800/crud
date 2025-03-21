@@ -35,6 +35,7 @@ export class FormProductComponent {
       name: [this.product?.name || '', [Validators.required]],
       value: [this.product?.value || 0, [Validators.required]],
       stock: [this.product?.stock || 0, [Validators.required]],
+      type: [this.product?.type || '', [Validators.required]],
     });
   }
 
@@ -48,7 +49,8 @@ export class FormProductComponent {
           Date.now(),
           formData.name,
           formData.value,
-          formData.stock
+          formData.stock,
+          formData.type
         );
         this.saveProduct.emit(newProduct);
       } else {

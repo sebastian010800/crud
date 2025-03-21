@@ -7,13 +7,15 @@ export class ProductModel {
   name: string;
   value: number;
   stock: number;
+  type: string;
   constructor(
     key: string,
     createdAt: number,
     updatedAt: number,
     name: string,
     value: number,
-    stock: number
+    stock: number,
+    type: string
   ) {
     this.key = key;
     this.createdAt = createdAt;
@@ -21,5 +23,6 @@ export class ProductModel {
     this.name = name;
     this.value = value;
     this.stock = stock;
+    this.type= type;
   }
 }

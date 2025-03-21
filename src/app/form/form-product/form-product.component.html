@@ -47,7 +47,30 @@
       required
     />
   </div>
-
+  <div>
+    <label
+      for="type"
+      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+      >type</label
+    >
+    <select
+      id="type"
+      formControlName="type"
+      class="shadow-xs bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-xs-light"
+    >
+      <option value="" disabled selected>Select option</option>
+      <option value="Drink">Drink</option>
+      <option value="Food">Food</option>
+      <option value="Snack">Snack</option>
+    </select>
+    <!-- <input
+      id="type"
+      formControlName="type"
+      type="string"
+      class="shadow-xs bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-xs-light"
+      required
+    /> -->
+  </div>
   <div class="flex justify-between gap-4 pt-4">
     <button
       type="submit"
