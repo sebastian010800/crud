@@ -5,9 +5,7 @@ import {
   Validators,
   ReactiveFormsModule,
 } from '@angular/forms';
-import { ProductModel } from '../../models/product.model';
-import { ProductService } from '../../services/product/product.service';
-import { CommonModule } from '@angular/common';
+import { ProductModel } from '../../models/product.model';import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-form-product',
